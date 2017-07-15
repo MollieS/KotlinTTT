@@ -7,6 +7,8 @@ class BoardTest : StringSpec() {
     init {
 
         var board = Board()
+        val fullGrid = listOf(Mark.X, Mark.X, Mark.X)
+        val grid = listOf(Mark.X, Mark.X, Mark.EMPTY)
 
         "it knows its size" {
             board.size shouldBe 9
@@ -24,20 +26,18 @@ class BoardTest : StringSpec() {
         }
 
         "it knows when it is full" {
-            val grid = listOf<Mark>(Mark.X, Mark.X, Mark.X)
-            val board = Board(grid)
+            val board = Board(fullGrid)
 
             board.isEmpty() shouldBe false
             board.isFull() shouldBe true
         }
 
         "it knows available positions" {
-            val grid = listOf<Mark>(Mark.X, Mark.X, Mark.EMPTY)
             val board = Board(grid)
 
-            val availblePositions = board.availablePositions()
+            val availablePositions = board.availablePositions()
 
-            availblePositions shouldBe listOf<Int>(2)
+            availablePositions shouldBe listOf(2)
         }
     }
 }
