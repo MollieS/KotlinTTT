@@ -38,9 +38,3 @@ class Board(var grid: List<Mark> = emptyList<Mark>()) {
     }
 }
 
-
-enum class Mark {
-    EMPTY,
-    X,
-    O
-}
