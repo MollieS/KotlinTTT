@@ -7,3 +7,4 @@ fun main(args: Array<String>) {
     var playerOne = HumanPlayer(Mark.X, input)
     var playerTwo = HumanPlayer(Mark.O, input)
 }
+
