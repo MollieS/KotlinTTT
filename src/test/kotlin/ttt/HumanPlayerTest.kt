@@ -18,6 +18,12 @@ class HumanPlayerTest : StringSpec() {
 
             inputFake.isRead shouldBe true
         }
+
+        "changes input to valid move" {
+            var move = humanPlayer.move()
+
+            move shouldBe 0
+        }
     }
 }
 
