@@ -6,10 +6,10 @@ class CLIDisplay : Display {
     }
 
     override fun welcome() {
-        show("welcome to ttt")
+        show("welcome to ttt\n")
     }
 
     override fun promptForMove() {
-        show("please choose a move")
+        show("please choose a move\n")
     }
 }
